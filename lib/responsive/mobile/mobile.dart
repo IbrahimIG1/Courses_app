@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class Home extends StatelessWidget {
-  Home({super.key});
+class MobileDesign extends StatefulWidget {
+  const MobileDesign({super.key});
 
-  List<Color> colors = [
+  @override
+  State<MobileDesign> createState() => _MobileDesignState();
+}
+List<Color> colors = [
     Color(0xff99CAE1),
     Color(0xffE19999),
     Color(0xff9EE199),
     Color(0xff99CAE1),
     Color(0xff99CAE1),
   ];
+class _MobileDesignState extends State<MobileDesign> {
   @override
   Widget build(BuildContext context) {
     var mainWidth = MediaQuery.of(context).size.width;
@@ -55,6 +59,7 @@ class Home extends StatelessWidget {
           ),
         ),
       ),
+     
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
